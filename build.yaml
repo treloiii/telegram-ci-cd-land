@@ -10,7 +10,7 @@ stages:
       - sh: npm run-script build
   move:
     instructions:
-      - sh: move to prod
+      - sh: echo move to prod
       - copy:
           target: dist
           dist: /home/trelloiii/bot-docs
