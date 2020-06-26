@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <vue-headful title="Telegram CI/CD bot"/>
     <navbar></navbar>
     <router-view></router-view>
   </div>
