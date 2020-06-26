@@ -11,6 +11,12 @@
                     </v-list-item-action>
                     <v-list-item-content style="margin-left: 1rem">{{item.title}}</v-list-item-content>
                 </v-list-item>
+                <v-list-item>
+                    <v-list-item-action>
+                        <v-icon class="ic" @click="github">fab fa-github</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content style="margin-left: 1rem" @click="github">Github</v-list-item-content>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
         <v-card
@@ -50,7 +56,6 @@
                 items: [
                     {title: "Download", path: "/download", icon: "fas fa-download"},
                     {title: "Getting started", path: "/start", icon: "fas fa-play"},
-                    {title: "Github", path: "/github", icon: "fab fa-github"}
                 ]
             }
         },
