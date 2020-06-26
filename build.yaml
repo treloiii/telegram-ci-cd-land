@@ -1,0 +1,20 @@
+stages:
+  preflight:
+    instructions:
+      - sh: node -v
+      - sh: npm -v
+  build:
+    instructions:
+      - sh: echo prepare to build!
+      - sh: npm i
+      - sh: npm run-script build
+  move:
+    instructions:
+      - sh: move to prod
+      - copy:
+          target: dist
+          dist: /home/trelloiii/bot-docs
+success:
+  - sh: echo BUILD COMPLETE
+failure:
+  - sh: echo BUILD FAILED
