@@ -2,11 +2,14 @@
     <div>
         <v-navigation-drawer v-model="sidebar" app>
             <v-list>
+                <v-list-item>
+                    <h3>Telegram CI/CD bot</h3>
+                </v-list-item>
                 <v-list-item v-for="item in items" :key="item.title" :to="item.path">
                     <v-list-item-action>
-                        <v-icon>{{item.icon}}</v-icon>
+                        <v-icon class="ic">{{item.icon}}</v-icon>
                     </v-list-item-action>
-                    <v-list-item-content>{{item.title}}</v-list-item-content>
+                    <v-list-item-content style="margin-left: 1rem">{{item.title}}</v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -47,7 +50,7 @@
                 items: [
                     {title: "Download", path: "/download", icon: "fas fa-download"},
                     {title: "Getting started", path: "/start", icon: "fas fa-play"},
-                    {title: "Github", path: "", icon: "fab fa-github"}
+                    {title: "Github", path: "/github", icon: "fab fa-github"}
                 ]
             }
         },
