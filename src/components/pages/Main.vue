@@ -70,7 +70,7 @@
         <v-row>
             <v-col></v-col>
             <v-col cols="11" style="margin-top: 3rem">
-                <span>Check our github! </span><v-icon class="ic" @click="github()">fab fa-github</v-icon>
+                <span>Check our github! </span><v-icon :class="`ic-${getTheme}`" @click="github()">fab fa-github</v-icon>
             </v-col>
             <v-col></v-col>
         </v-row>
@@ -78,13 +78,16 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
         name: "Main",
         methods: {
             github(){
                 location.href="https://github.com/treloiii/TelegramCICD"
             }
-        }
+        },
+        computed:mapGetters(["getTheme"])
     }
 </script>
 
@@ -92,7 +95,11 @@
     .v-image{
         border-radius: 1rem;
     }
-    .ic{
+    .ic-dark{
+        font-size: 60px!important;
+        color: white;
+    }
+    .ic-light{
         font-size: 60px!important;
         color: black;
     }

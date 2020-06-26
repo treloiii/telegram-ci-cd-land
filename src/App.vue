@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="getTheme">
     <vue-headful title="Telegram CI/CD bot"/>
     <navbar></navbar>
     <router-view></router-view>
@@ -8,9 +8,18 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+import {mapGetters} from "vuex";
 export default {
   name: 'App',
   components: {Navbar},
+  data(){
+    return {
+      theme:true //true - dark ; false - light
+    }
+  },
+  computed:{
+    ...mapGetters(["getTheme"]),
+  }
 }
 </script>
 
@@ -21,5 +30,13 @@ export default {
   }
   body{
     font-family: 'JetBrains Mono Regular',serif;
+  }
+  .dark{
+    background: #1b1f23;
+    color: whitesmoke;
+  }
+  .light{
+    background: white;
+    color: black;
   }
 </style>
