@@ -1,5 +1,5 @@
 <template>
-    <div>GETTING STARTED</div>
+    <div>GETTING STARTED!</div>
 </template>
 
 <script>

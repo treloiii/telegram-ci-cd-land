@@ -1,5 +1,5 @@
 <template>
-    <div>DOWNLOAD</div>
+    <div>DOWNLOAD!</div>
 </template>
 
 <script>
