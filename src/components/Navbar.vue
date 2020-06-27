@@ -19,7 +19,7 @@
                 </v-list-item>
                 <v-list-item>
                     <v-list-item-content>
-                        <v-btn text @click="changeTheme" :class="getTheme">Change theme to {{getTheme}}</v-btn>
+                        <v-btn text @click="changeTheme" :class="getTheme">Change theme to {{inverse}}</v-btn>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -39,7 +39,7 @@
 
                 <v-spacer></v-spacer>
                 <div class="xs-only">
-                    <v-btn text @click="changeTheme">Change theme to {{getTheme}}</v-btn>
+                    <v-btn text @click="changeTheme" :class="getTheme">Change theme to {{inverse}}</v-btn>
                     <router-link to="/download" tag="button">
                         <v-btn text :class="getTheme">Download</v-btn>
                     </router-link>
@@ -73,7 +73,7 @@
                 location.href = "https://github.com/treloiii/TelegramCICD";
             }
         },
-        computed: mapGetters(["getTheme"])
+        computed: mapGetters(["getTheme","inverse"])
     }
 </script>
 

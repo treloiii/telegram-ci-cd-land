@@ -5,10 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        theme: false
+        theme: true
     },
     getters: {
         getTheme(state){
+            if(state.theme)
+                return "dark"
+            else
+                return "light"
+        },
+        inverse(state){
             if(state.theme)
                 return "light"
             else
