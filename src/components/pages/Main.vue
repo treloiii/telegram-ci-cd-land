@@ -1,5 +1,5 @@
 <template>
-    <v-container class="text-center" style="margin-top: 3rem">
+    <v-container class="text-center top">
         <v-row>
             <v-col></v-col>
             <v-col cols="10">
@@ -102,10 +102,6 @@
     .ic-light{
         font-size: 60px!important;
         color: black;
-    }
-    .t-center {
-        width: 50%;
-        margin-left: 25%;
     }
     .content-block{
         margin-top: 3rem;

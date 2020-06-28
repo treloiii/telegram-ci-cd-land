@@ -59,12 +59,6 @@
 </script>
 
 <style scoped>
-    .full{
-        height: 100vh;
-    }
-    .top {
-        margin-top: 3rem;
-    }
 
     .dp {
         cursor: pointer;
