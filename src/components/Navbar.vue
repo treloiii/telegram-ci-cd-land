@@ -29,7 +29,7 @@
                 flat
                 tile
         >
-            <v-app-bar dense :class="`nav-${getTheme}`">
+            <v-app-bar dense :class="`nav-${getTheme}`" fixed app>
                 <span class="more-than-xs">
                     <v-app-bar-nav-icon @click="sidebar=!sidebar" :class="getTheme"></v-app-bar-nav-icon>
                 </span>
