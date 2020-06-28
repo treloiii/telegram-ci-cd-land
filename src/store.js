@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        theme: true
+        theme: localStorage.getItem("theme")&&localStorage.getItem("theme")==='true'
     },
     getters: {
         getTheme(state){
@@ -24,6 +24,7 @@ export default new Vuex.Store({
     mutations:{
         changeTheme(state){
             state.theme=!state.theme
+            localStorage.setItem("theme",state.theme)
         }
     }
 })
