@@ -31,6 +31,9 @@ export default {
   body{
     font-family: 'JetBrains Mono Regular',serif;
   }
+  .text-center{
+    text-align: center;
+  }
   .dark{
     background: #1b1f23;
     color: whitesmoke;
